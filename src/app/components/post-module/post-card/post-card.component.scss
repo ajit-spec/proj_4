@@ -1,0 +1,23 @@
+.post-card {
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.mat-card-header {
+  justify-content: space-between;
+  align-items: baseline;
+}

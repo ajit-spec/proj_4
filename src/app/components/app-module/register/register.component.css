@@ -1,0 +1,36 @@
+.container {
+  background: #1488CC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2B32B2, #1488CC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.container .form-container {
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.container .form-container form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.container .form-container .register-text {
+  margin: 0;
+}
+.container .form-container .register-text span {
+  color: #2B32B2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=register.component.css.map */

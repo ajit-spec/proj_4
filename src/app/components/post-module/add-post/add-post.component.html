@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Add Post</h2>
+  <form (ngSubmit)="submit()" [formGroup]="form">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput [formControlName]="'title'">
+      <mat-error *ngIf="getformcontrols().title.invalid">{{geterrormsgfortitle()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput [formControlName]="'description'" [rows]="7"></textarea>
+      <mat-error *ngIf="getformcontrols().description.invalid">{{geterrormsgfordescription()}}</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">{{isedit ? 'edit post' : 'Add post'}}</button>
+
+  </form>
+</div>

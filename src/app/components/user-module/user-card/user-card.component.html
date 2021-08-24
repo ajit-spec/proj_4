@@ -1,0 +1,8 @@
+<div class="user-card" *ngIf="user">
+  <div class="image" [ngStyle]="{
+  backgroundImage: 'url(' + user.profile_picture +')'
+  }"></div>
+  <h2>{{user.name}}</h2>
+  <button mat-raised-button color="primary" (click)="follow_user()"
+          *ngIf="!show_followers">{{isfollowed ? 'followed' : 'follow'}}</button>
+</div>

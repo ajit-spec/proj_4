@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+
+  & > * {
+    width: 30%;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+
+}
+
+h2 {
+  text-align: center;
+  margin: 2rem;
+}

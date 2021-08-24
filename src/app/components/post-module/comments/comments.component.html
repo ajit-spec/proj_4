@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="post-wrapper" *ngIf="post">
+    <h2>Title: {{post.title}}</h2>
+    <p>Description: {{post.description}}</p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput [formControlName]="'description'" [rows]="7"></textarea>
+      <mat-error *ngIf="getformcontrols().description.invalid">{{geterrormsgfordescription()}}</mat-error>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">{{edit_comment ? 'edit comment' : 'Add comment'}}</button>
+  </form>
+
+  <div class="comment-wrapper" *ngIf="service5.allcomments.length > 0">
+    <app-comment-card
+      *ngFor="let comment of service5.allcomments" [comment]="comment"
+      (editcomm)="start_edit_comment($event)"
+      (delcomm)="delete_comment($event)"></app-comment-card>
+  </div>
+
+  <h2 class="no-comment" *ngIf="service5.allcomments.length === 0">no comments</h2>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="form-container">
+    <h2>Login</h2>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput [formControlName]="'email'">
+        <mat-error *ngIf="getformcontrols().email.invalid">{{geterrormsgforemail()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [formControlName]="'password'">
+        <mat-error *ngIf="getformcontrols().password.invalid">{{geterrormsgforpassword()}}</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary">Login</button>
+    </form>
+    <p class="register-text">Dont have an account? <span [routerLink]="['/', 'register']">Register</span></p>
+  </div>
+</div>

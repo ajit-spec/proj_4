@@ -1,0 +1,16 @@
+.comment-card h4 {
+  font-size: 10px;
+  text-align: right;
+  font-weight: 700;
+}
+.comment-card .bottom-section .btn-wrapper {
+  display: flex;
+}
+.comment-card .bottom-section .btn-wrapper button {
+  margin-right: 1rem;
+}
+.comment-card .bottom-section .btn-wrapper button:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=comment-card.component.css.map */

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+}
+.container .post-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.container form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .comment-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+.container .comment-wrapper > * {
+  width: 30%;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+.container .no-comment {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=comments.component.css.map */

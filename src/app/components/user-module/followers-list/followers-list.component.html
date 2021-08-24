@@ -1,0 +1,3 @@
+<div class="container" *ngIf="allusers.length > 0">
+  <app-user-card *ngFor="let user of allusers" [user]="user" [show_followers]="true"></app-user-card>
+</div>

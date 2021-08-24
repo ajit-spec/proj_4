@@ -1,0 +1,48 @@
+<div class="container" *ngIf="user_info">
+  <div class="photo-wrapper">
+    <div class="profile-pic" [ngStyle]="{
+    backgroundImage: 'url('+ user_info?.profile_picture +')'
+    }"></div>
+    <input type="file" (change)="upload_file($event)">
+  </div>
+  <div class="profile-wrapper">
+    <div class="top-section">
+      <h2>Profile</h2>
+      <button mat-icon-button (click)="enableprofile()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    <form [formGroup]="form1" (ngSubmit)="profilesubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [formControlName]="'name'">
+        <mat-error *ngIf="getformcontrols().name.invalid">{{geterrormsgforname()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput [formControlName]="'phone'">
+        <mat-error *ngIf="getformcontrols().phone.invalid">{{geterrormsgforphone()}}</mat-error>
+      </mat-form-field>
+      <mat-radio-group color="primary" name="relationship_status" [formControlName]="'relationship_status'">
+        <mat-radio-button [value]="'single'">single</mat-radio-button>
+        <mat-radio-button [value]="'married'">married</mat-radio-button>
+      </mat-radio-group>
+      <button type="submit" mat-raised-button color="primary" [disabled]="!editprofile">Update</button>
+    </form>
+  </div>
+  <div class="password-wrapper">
+    <h2>Change Password</h2>
+    <form [formGroup]="form2" (ngSubmit)="change_password()">
+      <mat-form-field appearance="outline">
+        <mat-label>Old Password</mat-label>
+        <input matInput [formControlName]="'old_password'">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>New Password</mat-label>
+        <input matInput [formControlName]="'new_password'">
+        <mat-error *ngIf="getformcontrols2().new_password.invalid">{{geterrormsgfornew_password()}}</mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Change</button>
+    </form>
+  </div>
+</div>

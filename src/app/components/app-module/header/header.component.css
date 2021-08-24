@@ -1,0 +1,14 @@
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav > * {
+  margin-left: 1rem;
+}
+nav > *:first-child {
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=header.component.css.map */

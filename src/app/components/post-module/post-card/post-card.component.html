@@ -1,0 +1,33 @@
+<mat-card class="post-card" *ngIf="post">
+  <mat-card-header>
+    <mat-card-title>{{post.title}}</mat-card-title>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="edit_post()">
+        <mat-icon>edit</mat-icon>
+        <span>edit</span>
+      </button>
+      <button mat-menu-item (click)="deletepost()">
+        <mat-icon>delete</mat-icon>
+        <span>delete</span>
+      </button>
+    </mat-menu>
+  </mat-card-header>
+  <mat-card-content>
+    <p [routerLink]="['/', 'post', 'comments']" [queryParams]="{post_id: post?._id}">{{post.description | pipe1}}</p>
+    <div class="bottom-section">
+      <div class="btn-wrapper">
+        <button mat-icon-button (click)="like_post()">
+          <mat-icon [matBadge]="post.likes.length" matBadgeOverlap>thumb_up</mat-icon>
+        </button>
+        <button mat-icon-button (click)="dislike_post()">
+          <mat-icon [matBadge]="post.dislikes.length" matBadgeOverlap>thumb_down</mat-icon>
+        </button>
+      </div>
+      <h3>{{post.comments.length}}
+        comments</h3>
+    </div>
+  </mat-card-content>
+</mat-card>

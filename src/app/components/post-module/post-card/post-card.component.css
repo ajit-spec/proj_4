@@ -1,0 +1,20 @@
+.post-card .bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-card .bottom-section .btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+.post-card .bottom-section h3 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.mat-card-header {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/*# sourceMappingURL=post-card.component.css.map */

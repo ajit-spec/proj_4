@@ -1,0 +1,12 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container > * {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=users.component.css.map */

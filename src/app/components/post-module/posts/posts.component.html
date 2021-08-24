@@ -1,0 +1,9 @@
+<div class="container" *ngIf="service5.allposts.length> 0">
+  <app-post-card
+    *ngFor="let post of service5.allposts" [post]="post" (getposts)="getallposts()"></app-post-card>
+
+</div>
+
+<ng-container *ngIf="service5.allposts.length === 0">
+  <h2>No posts</h2>
+</ng-container>

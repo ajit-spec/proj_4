@@ -1,0 +1,13 @@
+<mat-card class="comment-card" *ngIf="comment">
+  <mat-card-content>
+    <p>{{comment.description}}</p>
+    <h4>made by {{comment.user}}</h4>
+    <div class="bottom-section">
+      <div class="btn-wrapper">
+        <button mat-raised-button color="accent" (click)="editcomm.emit({description: comment.description, _id: comment._id})">edit
+        </button>
+        <button mat-raised-button color="warn" (click)="delcomm.emit({_id: comment._id})">delete</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <h2>My App</h2>
+  <nav>
+<!--    <button mat-button [routerLink]="['/', 'user', 'chat']">chat</button>-->
+    <button mat-button [routerLink]="['/', 'user', 'followers-list']">followers</button>
+    <button mat-button [routerLink]="['/', 'user', 'follow']">all follow user</button>
+    <button mat-button [routerLink]="['/', 'user']">all unfollow user</button>
+    <button mat-button [routerLink]="['/', 'post']">all post</button>
+    <button mat-button [routerLink]="['/', 'post', 'add-post']">add post</button>
+    <button mat-button [matMenuTriggerFor]="menu">welcome {{service4.getcurrentuser()}}</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/', 'my-account']">My Account</button>
+      <button mat-menu-item (click)="service1.logout()">logout</button>
+    </mat-menu>
+  </nav>
+</mat-toolbar>
